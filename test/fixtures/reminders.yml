@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  issue_id: 1
+  reminder_date: 2010-12-15
+two:
+  id: 2
+  issue_id: 1
+  reminder_date: 2010-12-15
