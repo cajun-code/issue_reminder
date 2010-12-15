@@ -11,7 +11,7 @@ module IssueReminder
       })
     end
     def controller_issues_new_before_save(context={})
-      
+      context[:reminder]
     end
     alias_method :controller_issues_edit_before_save, :controller_issues_new_before_save
   end
