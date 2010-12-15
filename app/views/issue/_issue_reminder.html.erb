@@ -1,1 +1,14 @@
-<h1>reminder goes here</h1>
+<fieldset class="tabular"><legend><%= l(:issue_reminder) %></legend>
+  <div>
+    <ul>
+    <% :reminders.each do |reminder|  %>
+      <li><%= reminder.reminder_date%></li>
+    <% end %>
+    </ul>
+  </div>
+
+  <%= form_for (:reminder) do |f| %>
+  <p><%= f.text_field :reminder_date, :size => 10 %><%= calendar_for('reminder_reminder_date') %></p>
+  <% end %>
+
+</fieldset>
