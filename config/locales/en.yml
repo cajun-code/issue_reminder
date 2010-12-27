@@ -1,3 +1,5 @@
 # English strings go here for Rails i18n
 en:
   issue_reminder: "Reminders"
+  reminder_add_label: "Select Date:"
+  reminder_add_button: "Add"

@@ -1,19 +1,20 @@
+
 <hr />
 <div id="issue_reminder">
   <div class="contextual">
-    <%= link_to(l(:button_add) ) %>
+    <%= toggle_link l(:button_add), 'issue_reminder_form'  %>
   </div>
   <p><strong><%= l(:issue_reminder) %></strong></p>
   <div id="issue_reminder_list">
-    <ul>
-      <% reminders.each do |reminder|  %>
-        <li><%= reminder.reminder_date%></li>
-      <% end %>
-    </ul>
+    <%= render(:partial => "issue/reminders" , :object => reminders) %>
+
   </div>
 </div>
 <div id="issue_reminder_form" style="display: none">
-<%#<%= form_for (:reminder) do |f| %> 
-<p><%#= f.text_field :reminder_date, :size => 10 %><%#= calendar_for('reminder_reminder_date') %></p>
-  <%#<% end %>
+<% form_remote_for( :reminder, :url => {:controller => :reminder, :action => :create} ) do |f| %> 
+  <%= f.hidden_field :issue_id, :value => issue.id.to_s %>
+  <p><%= l( :reminder_add_label )%>
+  <%= f.text_field :reminder_date, :size => 10 %><%= calendar_for('reminder_reminder_date') %>
+  <%= submit_tag l(:reminder_add_button) %></p>
+  <% end %>
 </div>

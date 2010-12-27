@@ -1,0 +1,5 @@
+    <ul>
+      <% reminders.each do |reminder|  %>
+        <li><%= reminder.reminder_date%> <%= link_to_remote image_tag("cross.png", :plugin => "redmine_issue_reminder"), :url => {:controller => "reminder", :action => 'delete', :id => reminder.id}, :method=> :post, :confirm =>"Are you sure you want to delete this reminder?" %></li>
+      <% end %>
+    </ul>
