@@ -1,0 +1,7 @@
+<% if @issue.new_record? %>
+<div id="reminder">
+  <p><label>Reminder Date:</label><%= text_field_tag :reminder_date, nil, :size => 10 %><%= calendar_for('reminder_date') %></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;<p>
+</div>
+<% end %>
