@@ -1,0 +1,1 @@
+15 0 * * * cd <rails app location> && /usr/bin/rake reminder:send RAILS_ENV=production
