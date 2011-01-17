@@ -1,5 +1,6 @@
 class ReminderMailer < ActionMailer::Base
   def remind(issue)
+    content_type "text/html"
     subject  "Issue #{issue.id} is due on #{issue.due_date}"
     recipients issue.assigned_to.mail
     from "revtrack@revenuemed.com"    
