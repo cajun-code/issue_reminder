@@ -4,7 +4,7 @@ class ReminderMailer < ActionMailer::Base
     subject  "Issue #{issue.id} is due on #{issue.due_date}"
     recipients issue.assigned_to.mail
     from "revtrack@revenuemed.com"    
-    body :issue => issue
+    body :issue => issue, :host => Setting['host_name']
   end
   
   def self.send_reminders    

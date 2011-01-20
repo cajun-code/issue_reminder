@@ -1,7 +1,7 @@
 <p>Greetings <%= @issue.assigned_to.firstname %></p>
 
 <p>This is just a reminder to let you know that 
-<%=link_to("#{@issue.tracker} ##{@issue.id}", :controller => 'issues', :action => 'show', :id => @issue, :only_path => false, :host =>"track.revenuemed.com")%> 
+<%=link_to("#{@issue.tracker} ##{@issue.id}", :controller => 'issues', :action => 'show', :id => @issue, :only_path => false, :host =>"#{@host}")%> 
 is due on <%= @issue.due_date %></p>
 
 
