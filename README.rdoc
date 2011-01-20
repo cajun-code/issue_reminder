@@ -1,3 +1,10 @@
 = issue_reminder
 
-Description goes here
+Issue Reminder is a plugin for redmine.  It sends an email notification to the assignee on date specified.
+
+There is a rake task that needs to be scheduiled as a cron job or scheduled task.  See issue_reminder_cron for more details.
+
+to force sending of e-mail use rake task reminder:send 
+
+
+

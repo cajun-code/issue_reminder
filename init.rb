@@ -3,12 +3,12 @@ require 'redmine'
 
 
 Redmine::Plugin.register :redmine_issue_reminder do
-  name 'Redmine Issue Reminder plugin'
+  name 'Issue Reminder plugin'
   author 'Allan Davis'
   description 'Create a reminder email based on a date.'
-  version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  version '0.0.2'
+  url 'http://github.com/javaalley/issue_reminder'
+  author_url 'http://github.com/javaalley'
 end
 
 require 'dispatcher'
